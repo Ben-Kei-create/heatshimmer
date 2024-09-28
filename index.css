@@ -1,0 +1,292 @@
+body {
+    background: radial-gradient(ellipse at bottom, #03323a 0%, #000000 100%);
+    color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    width: 100vw;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+  .container {
+    position: relative;
+    top: 30px;
+  }
+
+  .heatshimmer_title {
+    animation: shine 50s linear infinite;
+    background: url('backimg.png');
+    background-clip: text;
+    background-size: auto;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Micro 5", sans-serif;
+    font-size: 7vh;
+    font-style: normal;
+    font-weight: 400;
+    left: 50%;
+    letter-spacing: 0.3vw;
+    margin: 0;
+    max-width: 1200px;
+    overflow-wrap: break-word;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes shine {
+    from { background-position: center 0; }
+    to { background-position: center 200%; }
+  }
+
+  .cp_navi06 {
+    background-color: #282828;
+    border: 1px double #dedede;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -1px rgba(170, 8, 8, 0.055);
+    color: #000000;
+    display: block;
+    font-family: "Micro 5", sans-serif;
+    font-size: x-large;
+    margin: 1em auto;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .cp_navi06 ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cp_navi06 ul li {
+    list-style-type: none;
+    transition: all 0.3s;
+  }
+
+  .cp_navi06 ul li a {
+    color: #aaaaaa;
+    display: block;
+    line-height: 56px;
+    padding: 0 10px;
+    text-decoration: none;
+  }
+
+  .cp_navi06 ul li a.caret {
+    align-items: center;
+    display: flex;
+  }
+
+  .cp_navi06 ul li a.caret::after {
+    background: #aaaaaa;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    content: '';
+    height: 5px;
+    transition: color 0.1s linear;
+    width: 10px;
+  }
+
+  .cp_navi06 ul li:hover {
+    background-color: rgb(218, 60, 65);
+  }
+
+  .cp_navi06 ul li:hover a {
+    color: #ffffff;
+  }
+
+  .cp_navi06 ul li:hover a.caret::after {
+    background: #ffffff;
+  }
+
+  .cp_navi06 ul li ul {
+    background-color: rgb(218, 60, 65);
+    border-radius: 0 0 4px 4px;
+    border-top: 0;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    display: none;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s;
+    visibility: hidden;
+    width: 165px;
+  }
+
+  .cp_navi06 ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .cp_navi06 ul li ul li {
+    border-radius: 0 0 4px 4px;
+  }
+
+  .cp_navi06 ul li ul li a {
+    color: #ffffff;
+  }
+
+  .cp_navi06 ul li ul li:hover a {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .profile {
+    font-family: "Silkscreen", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 30px;
+  }
+
+
+
+/* スライダーブロック */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide.active {
+    opacity: 1;
+  }
+
+  /* footerブロック */
+  .footer {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px 20px;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .footer-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .footer-text p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .footer-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .btn {
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .btn-primary {
+    background-color: #ffffff;
+    color: #1a1a1a;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+
+  .footer-links {
+    align-items: center;
+    border-top: 1px solid #333;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  .footer-nav a {
+    color: #ffffff;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+
+  .footer-logo {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .upper-footer {
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px 20px;
+  }
+
+  .footer-column {
+    flex: 1;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .footer-column h3::before {
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+  }
+
+  .footer-column:nth-child(1) h3::before { background-color: #4CAF50; }
+  .footer-column:nth-child(2) h3::before { background-color: #2196F3; }
+  .footer-column:nth-child(3) h3::before { background-color: #9C27B0; }
+  .footer-column:nth-child(4) h3::before { background-color: #FF9800; }
+
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .footer-column li a::first-letter {
+    display: inline-block;
+    visibility: hidden;
+    width: 5em;
+  }
